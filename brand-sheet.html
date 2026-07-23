@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megan O'Byrne | Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --flame:#ff5a2e;      /* primary orange-coral (wordmark) */
+  --orange:#ff7a3c;     /* warm orange */
+  --coral:#ff6f61;      /* coral */
+  --hot-pink:#f0609e;   /* magenta-pink accent */
+  --pink:#f79abf;       /* soft pink */
+  --blush:#fcdbe6;      /* light pink surface */
+  --cream:#fbf3ea;      /* cream surface */
+  --ink:#2a2622;        /* warm charcoal text */
+  --muted:#8a7f77;      /* warm grey */
+  --white:#ffffff;
+  --sunset:linear-gradient(120deg,#f79abf 0%,#ff6f8b 38%,#ff7a3c 76%,#ff5a2e 100%);
+  --radius:18px;
+  --shadow:0 10px 30px rgba(255,90,46,0.12);
+  --shadow-soft:0 2px 14px rgba(42,38,34,0.06);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{
+  font-family:'Poppins',sans-serif;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  font-size:15px;
+}
+.script{font-family:'Kaushan Script',cursive;}
+
+.page{max-width:960px;margin:0 auto;padding:0 28px 64px;}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:var(--sunset);
+  border-radius:0 0 32px 32px;
+  padding:64px 40px 56px;
+  text-align:center;
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+  break-inside:avoid;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 70% 55% at 50% 118%, rgba(255,255,255,0.35), transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow{
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  font-size:12px;
+  color:rgba(255,255,255,0.92);
+  margin-bottom:18px;
+  position:relative;
+}
+.hero h1{
+  font-family:'Kaushan Script',cursive;
+  font-weight:400;
+  font-size:clamp(52px,9vw,84px);
+  line-height:1.1;
+  text-shadow:0 3px 22px rgba(42,38,34,0.18);
+  position:relative;
+  padding-bottom:8px;
+}
+.hero .descriptor{
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:3.5px;
+  font-size:13px;
+  margin-top:14px;
+  position:relative;
+}
+.hero .pronounce{
+  display:inline-block;
+  margin-top:22px;
+  background:rgba(255,255,255,0.22);
+  border:1px solid rgba(255,255,255,0.45);
+  border-radius:999px;
+  padding:7px 20px;
+  font-size:12.5px;
+  font-weight:500;
+  position:relative;
+  backdrop-filter:blur(4px);
+}
+.hero .doc-label{
+  margin-top:34px;
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  opacity:0.85;
+  position:relative;
+}
+
+/* ---------- Sections ---------- */
+.section{margin-top:52px;break-inside:avoid;}
+.eyebrow{
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  font-size:12px;
+  color:var(--flame);
+  margin-bottom:6px;
+}
+.section > h2{
+  font-weight:700;
+  font-size:26px;
+  letter-spacing:-0.3px;
+  margin-bottom:20px;
+}
+.section > h2 .script{
+  color:var(--flame);
+  font-weight:400;
+  font-size:30px;
+}
+
+.card{
+  background:var(--white);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-soft);
+  padding:30px 32px;
+  break-inside:avoid;
+}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:720px){.grid-2{grid-template-columns:1fr;}}
+
+/* ---------- Essence ---------- */
+.positioning{
+  font-size:19px;
+  font-weight:500;
+  line-height:1.55;
+  max-width:640px;
+}
+.positioning strong{font-weight:700;color:var(--flame);}
+.traits{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.trait{
+  border-radius:999px;
+  padding:8px 22px;
+  font-weight:600;
+  font-size:13.5px;
+  color:var(--white);
+}
+.trait:nth-child(1){background:var(--flame);}
+.trait:nth-child(2){background:var(--hot-pink);}
+.trait:nth-child(3){background:var(--orange);}
+.trait:nth-child(4){background:var(--coral);}
+
+/* ---------- Wordmark ---------- */
+.mark-stage{
+  border-radius:var(--radius);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:44px 24px 36px;
+  text-align:center;
+}
+.mark-stage.primary{background:var(--blush);}
+.mark-stage.secondary{background:var(--ink);}
+.mark-stage .wordmark{
+  font-family:'Kaushan Script',cursive;
+  font-size:46px;
+  color:var(--flame);
+  line-height:1.2;
+  padding-bottom:6px;
+}
+.mark-stage .lockup{
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:6px;
+  font-size:22px;
+  color:var(--white);
+}
+.mark-stage .lockup-sub{
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:10px;
+  color:var(--pink);
+  margin-top:8px;
+}
+.mark-caption{
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--muted);
+  margin-top:16px;
+  text-align:center;
+}
+.mark-rules{margin-top:20px;}
+.mark-rules ul{list-style:none;}
+.mark-rules li{
+  position:relative;
+  padding-left:26px;
+  margin-bottom:9px;
+  font-size:14px;
+}
+.mark-rules li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--sunset);
+}
+
+/* ---------- Colour ---------- */
+.gradient-band{
+  height:78px;
+  border-radius:var(--radius);
+  background:var(--sunset);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:flex-end;
+  padding:14px 20px;
+  margin-bottom:22px;
+}
+.gradient-band span{
+  color:var(--white);
+  font-weight:600;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.swatches{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+@media(max-width:720px){.swatches{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:480px){.swatches{grid-template-columns:repeat(2,1fr);}}
+.swatch{
+  background:var(--white);
+  border-radius:14px;
+  box-shadow:var(--shadow-soft);
+  overflow:hidden;
+  break-inside:avoid;
+}
+.swatch .chip{height:66px;}
+.swatch .chip.bordered{border-bottom:1px solid #efe7de;}
+.swatch .meta{padding:10px 12px 12px;}
+.swatch .name{font-weight:600;font-size:12.5px;line-height:1.3;}
+.swatch .hex{font-size:11.5px;color:var(--muted);letter-spacing:0.5px;}
+.swatch .role{font-size:10.5px;color:var(--muted);margin-top:3px;line-height:1.4;}
+.palette-note{
+  margin-top:18px;
+  font-size:13.5px;
+  color:var(--muted);
+  max-width:680px;
+}
+.palette-note b{color:var(--ink);font-weight:600;}
+
+/* ---------- Typography ---------- */
+.type-specimen{margin-bottom:6px;}
+.type-specimen .demo-script{
+  font-family:'Kaushan Script',cursive;
+  font-size:40px;
+  color:var(--flame);
+  line-height:1.25;
+  padding-bottom:4px;
+}
+.type-specimen .demo-h{
+  font-weight:700;
+  font-size:26px;
+  letter-spacing:-0.3px;
+}
+.type-specimen .demo-body{font-size:15px;margin-top:6px;}
+.type-label{
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--muted);
+  margin-bottom:12px;
+}
+.type-rules{
+  margin-top:16px;
+  border-top:1px solid #f2e9df;
+  padding-top:14px;
+  font-size:13px;
+  color:var(--muted);
+}
+.type-rules b{color:var(--ink);font-weight:600;}
+.type-scale{
+  margin-top:14px;
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.9;
+}
+.type-scale b{color:var(--ink);font-weight:600;}
+
+/* ---------- Voice ---------- */
+.voice-desc{font-size:15.5px;max-width:660px;margin-bottom:22px;}
+.say-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:720px){.say-grid{grid-template-columns:1fr;}}
+.say-col{
+  border-radius:14px;
+  padding:20px 22px;
+  break-inside:avoid;
+}
+.say-col.yes{background:var(--blush);}
+.say-col.no{background:#f4efe9;}
+.say-col h4{
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+.say-col.yes h4{color:var(--hot-pink);}
+.say-col.no h4{color:var(--muted);}
+.say-col p{font-size:14px;margin-bottom:10px;line-height:1.5;}
+.say-col p:last-child{margin-bottom:0;}
+.say-col.no p{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(138,127,119,0.5);}
+
+/* ---------- Taglines ---------- */
+.taglines{display:grid;gap:14px;}
+.tagline{
+  background:var(--white);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-soft);
+  padding:22px 28px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  break-inside:avoid;
+}
+.tagline .num{
+  font-family:'Kaushan Script',cursive;
+  font-size:28px;
+  color:var(--pink);
+  min-width:34px;
+  text-align:center;
+}
+.tagline p{font-weight:600;font-size:17px;}
+
+/* ---------- Imagery ---------- */
+.imagery-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start;}
+@media(max-width:720px){.imagery-grid{grid-template-columns:1fr;}}
+.imagery-list{list-style:none;}
+.imagery-list li{
+  position:relative;
+  padding-left:26px;
+  margin-bottom:10px;
+  font-size:14.5px;
+}
+.imagery-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--sunset);
+}
+.frame-demo-wrap{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  padding:10px 0 4px;
+}
+.frame-demo{
+  width:118px;
+  height:150px;
+  border:4px solid var(--flame);
+  border-radius:10px;
+  background:linear-gradient(160deg,var(--pink) 0%,var(--orange) 70%,var(--flame) 100%);
+  transform:rotate(-3deg);
+  box-shadow:var(--shadow);
+}
+.frame-demo.alt{
+  border-color:var(--coral);
+  background:linear-gradient(200deg,var(--blush) 0%,var(--pink) 55%,var(--coral) 100%);
+  transform:rotate(2.5deg);
+}
+.frame-caption{
+  text-align:center;
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:14px;
+  font-weight:500;
+}
+
+/* ---------- Do / Don't ---------- */
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:720px){.dodont{grid-template-columns:1fr;}}
+.dd-col{
+  border-radius:var(--radius);
+  padding:24px 26px;
+  break-inside:avoid;
+}
+.dd-col.do{background:var(--white);box-shadow:var(--shadow-soft);border-top:5px solid var(--flame);}
+.dd-col.dont{background:var(--white);box-shadow:var(--shadow-soft);border-top:5px solid var(--ink);}
+.dd-col h4{
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+.dd-col.do h4{color:var(--flame);}
+.dd-col.dont h4{color:var(--ink);}
+.dd-col ul{list-style:none;}
+.dd-col li{
+  position:relative;
+  padding-left:24px;
+  margin-bottom:9px;
+  font-size:13.5px;
+  line-height:1.5;
+}
+.dd-col.do li::before{
+  content:"\2713";
+  position:absolute;
+  left:0;
+  color:var(--flame);
+  font-weight:700;
+}
+.dd-col.dont li::before{
+  content:"\2715";
+  position:absolute;
+  left:0;
+  color:var(--muted);
+  font-weight:700;
+}
+
+/* ---------- Footer ---------- */
+.sheet-footer{
+  margin-top:56px;
+  padding-top:22px;
+  border-top:1px solid #eee2d6;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+.sheet-footer .script{color:var(--flame);font-size:16px;}
+
+/* ---------- Print ---------- */
+@media print{
+  body{background:var(--white);font-size:12.5px;}
+  .page{max-width:100%;padding:0 4mm 8mm;}
+  .hero{border-radius:0 0 18px 18px;padding:36px 28px 32px;}
+  .section{margin-top:26px;}
+  .card{box-shadow:none;border:1px solid #f0e6db;padding:20px 22px;}
+  .swatch,.tagline,.dd-col{box-shadow:none;border:1px solid #f0e6db;}
+  .gradient-band{box-shadow:none;}
+  .frame-demo{box-shadow:none;}
+  .section,.card,.swatch,.tagline,.dd-col,.say-col,.mark-stage{break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-eyebrow">Brand Guidelines</div>
+  <h1 class="script">Megan O'Byrne</h1>
+  <div class="descriptor">Social Media Strategist &amp; Content Creator</div>
+  <div class="pronounce">O'Byrne, said "O'Burn"</div>
+  <div class="doc-label">Identity Sheet &middot; Sunset Edition</div>
+</header>
+
+<main class="page">
+
+  <!-- 2. Brand essence -->
+  <section class="section">
+    <div class="eyebrow">01 &middot; Brand Essence</div>
+    <h2>Who the brand <span class="script">is</span></h2>
+    <div class="card">
+      <p class="positioning">"Your social media should do more than look good. It should <strong>build trust</strong>, <strong>grow your audience</strong>, and <strong>turn viewers into customers</strong>."</p>
+      <div class="traits">
+        <span class="trait">Warm</span>
+        <span class="trait">Authentic</span>
+        <span class="trait">Confident</span>
+        <span class="trait">Results-aware</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Wordmark -->
+  <section class="section">
+    <div class="eyebrow">02 &middot; Logo &amp; Wordmark</div>
+    <h2>The <span class="script">wordmark</span></h2>
+    <div class="grid-2">
+      <div>
+        <div class="mark-stage primary">
+          <div class="wordmark">Megan O'Byrne</div>
+        </div>
+        <div class="mark-caption">Primary &middot; Kaushan Script in Flame</div>
+      </div>
+      <div>
+        <div class="mark-stage secondary">
+          <div class="lockup">Megan O'Byrne</div>
+          <div class="lockup-sub">Social Media Strategist &amp; Content Creator</div>
+        </div>
+        <div class="mark-caption">Secondary &middot; Poppins Uppercase Lockup</div>
+      </div>
+    </div>
+    <div class="card mark-rules" style="margin-top:20px;">
+      <ul>
+        <li>Primary wordmark is the name set in Kaushan Script, always in Flame (#ff5a2e), on Blush, Cream or White backgrounds. On the sunset gradient, use White.</li>
+        <li>Secondary lockup is Poppins 800 uppercase with wide letter-spacing, used where script would be too decorative (footers, small print, dark surfaces).</li>
+        <li>Clear space: keep at least the height of the capital "M" free on all sides of either mark.</li>
+        <li>Do not stretch, outline, add drop shadows to, recolour outside the palette, or set the wordmark on busy photography without a scrim.</li>
+        <li>Never pair the wordmark with any other brand's logo or colours.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Colour -->
+  <section class="section">
+    <div class="eyebrow">03 &middot; Colour Palette</div>
+    <h2>The <span class="script">sunset</span> palette</h2>
+    <div class="gradient-band"><span>Sunset Gradient &middot; hero backgrounds &amp; primary CTAs</span></div>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#ff5a2e;"></div><div class="meta"><div class="name">Flame</div><div class="hex">#FF5A2E</div><div class="role">Primary &middot; wordmark, CTAs</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#ff7a3c;"></div><div class="meta"><div class="name">Orange</div><div class="hex">#FF7A3C</div><div class="role">Warm support</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#ff6f61;"></div><div class="meta"><div class="name">Coral</div><div class="hex">#FF6F61</div><div class="role">Accents, photo frames</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#f0609e;"></div><div class="meta"><div class="name">Hot Pink</div><div class="hex">#F0609E</div><div class="role">Magenta-pink accent</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#f79abf;"></div><div class="meta"><div class="name">Pink</div><div class="hex">#F79ABF</div><div class="role">Soft pink family</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#fcdbe6;"></div><div class="meta"><div class="name">Blush</div><div class="hex">#FCDBE6</div><div class="role">Light pink surface</div></div></div>
+      <div class="swatch"><div class="chip bordered" style="background:#fbf3ea;"></div><div class="meta"><div class="name">Cream</div><div class="hex">#FBF3EA</div><div class="role">Base surface</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#2a2622;"></div><div class="meta"><div class="name">Ink</div><div class="hex">#2A2622</div><div class="role">Body text, dark surfaces</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#8a7f77;"></div><div class="meta"><div class="name">Muted</div><div class="hex">#8A7F77</div><div class="role">Captions, secondary text</div></div></div>
+      <div class="swatch"><div class="chip bordered" style="background:#ffffff;"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div><div class="role">Cards, text on gradient</div></div></div>
+    </div>
+    <p class="palette-note"><b>How to use it:</b> Flame leads. The pink family (Hot Pink, Pink, Blush) softens and warms. Cream and White carry the layouts. Ink does the talking. Body text is always Ink on light surfaces, never light grey on cream.</p>
+  </section>
+
+  <!-- 5. Typography -->
+  <section class="section">
+    <div class="eyebrow">04 &middot; Typography</div>
+    <h2>Two typefaces, <span class="script">one voice</span></h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="type-label">Display &amp; Script Accent</div>
+        <div class="type-specimen">
+          <div class="demo-script">Kaushan Script</div>
+        </div>
+        <div class="type-rules"><b>Use for:</b> her name, hero flourishes and single accent words inside headings. <b>Never for:</b> body copy, buttons, captions or anything long. Keep it rare so it stays special.</div>
+        <div class="type-scale"><b>Hero name:</b> 52 to 84px &middot; <b>Section flourish:</b> 28 to 40px</div>
+      </div>
+      <div class="card">
+        <div class="type-label">Headings, Body &amp; UI</div>
+        <div class="type-specimen">
+          <div class="demo-h">Poppins carries everything else</div>
+          <p class="demo-body">Weights 400 to 800. Clear, friendly and modern. Body copy sits at 15 to 16px with relaxed line height.</p>
+        </div>
+        <div class="type-rules"><b>Eyebrow labels:</b> Poppins 600, uppercase, 2.5px letter-spacing, Flame, ~12px. <b>Headings:</b> Poppins 700 or 800 in Ink.</div>
+        <div class="type-scale"><b>H1:</b> 32 to 44px 800 &middot; <b>H2:</b> 24 to 28px 700 &middot; <b>Body:</b> 15 to 16px 400 &middot; <b>Caption:</b> 12 to 13px 500</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Voice -->
+  <section class="section">
+    <div class="eyebrow">05 &middot; Voice &amp; Tone</div>
+    <h2>How the brand <span class="script">speaks</span></h2>
+    <div class="card">
+      <p class="voice-desc">Warm, authentic, confident, human. Wellness-calm but results-aware. Speaks plainly, no corporate jargon, no hype. Sounds like a sharp, friendly professional who understands people. Short lines. One idea at a time.</p>
+      <div class="say-grid">
+        <div class="say-col yes">
+          <h4>We say</h4>
+          <p>"Let's make content people actually stop scrolling for."</p>
+          <p>"Every post has a job. Here's what this one does."</p>
+          <p>"Real moments work harder than polished ads."</p>
+        </div>
+        <div class="say-col no">
+          <h4>We don't say</h4>
+          <p>"Leveraging synergistic omnichannel solutions."</p>
+          <p>"Go viral overnight, guaranteed!"</p>
+          <p>"Best-in-class disruptive growth hacking."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Taglines -->
+  <section class="section">
+    <div class="eyebrow">06 &middot; Taglines</div>
+    <h2>Approved <span class="script">lines</span></h2>
+    <div class="taglines">
+      <div class="tagline"><span class="num">1</span><p>Content that feels real. Results that don't.</p></div>
+      <div class="tagline"><span class="num">2</span><p>Scroll-stopping content, strategy behind every frame.</p></div>
+      <div class="tagline"><span class="num">3</span><p>Social that builds trust, grows audiences, and converts.</p></div>
+    </div>
+  </section>
+
+  <!-- 8. Imagery -->
+  <section class="section">
+    <div class="eyebrow">07 &middot; Imagery Style</div>
+    <h2>What the brand <span class="script">looks like</span></h2>
+    <div class="card">
+      <div class="imagery-grid">
+        <div>
+          <ul class="imagery-list">
+            <li>Sunsets and golden-hour warmth. Light that feels like the palette.</li>
+            <li>Travel, wellness and real-life moments. Lived-in, not staged.</li>
+            <li>Authentic UGC-style photography and video. Phones welcome, people first.</li>
+            <li>Photo frames: 3 to 4px solid Flame or Coral borders with a slight rotation, echoing a collage feel.</li>
+            <li>No stock-corporate imagery. No handshakes in glass offices, no posed suits.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="frame-demo-wrap">
+            <div class="frame-demo"></div>
+            <div class="frame-demo alt"></div>
+          </div>
+          <div class="frame-caption">Framed photo treatment: Flame or Coral border, slight tilt</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Do / Don't -->
+  <section class="section">
+    <div class="eyebrow">08 &middot; Quick Rules</div>
+    <h2>Do and <span class="script">don't</span></h2>
+    <div class="dodont">
+      <div class="dd-col do">
+        <h4>Do</h4>
+        <ul>
+          <li>Lead with Flame and the sunset gradient.</li>
+          <li>Set body text in Ink on Cream, White or Blush.</li>
+          <li>Keep Kaushan Script for the name and rare accents only.</li>
+          <li>Use pill buttons: Flame or sunset fill, white Poppins 600 text.</li>
+          <li>Use real photos and honest, plain language.</li>
+          <li>Leave placeholders where a real proof point is still to come.</li>
+        </ul>
+      </div>
+      <div class="dd-col dont">
+        <h4>Don't</h4>
+        <ul>
+          <li>No green or gold anywhere in the identity.</li>
+          <li>No ForeShiloh logos, colours or straplines. This is Meg's brand.</li>
+          <li>No invented metrics, testimonials, client names or results.</li>
+          <li>No em dashes or double hyphens in copy.</li>
+          <li>No corporate jargon, hype or stock-corporate imagery.</li>
+          <li>No light grey paragraphs on cream backgrounds.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sheet-footer">
+    <span><span class="script">Megan O'Byrne</span></span>
+    <span>@meggarnitravels &middot; megan.obyrne29@gmail.com &middot; +44 7883 887271</span>
+  </footer>
+
+</main>
+
+</body>
+</html>
