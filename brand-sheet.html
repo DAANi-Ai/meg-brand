@@ -5,36 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Megan O'Byrne | Brand Guidelines</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
 <style>
 :root{
-  --flame:#ff5a2e;      /* primary orange-coral (wordmark) */
-  --orange:#ff7a3c;     /* warm orange */
-  --coral:#ff6f61;      /* coral */
-  --hot-pink:#f0609e;   /* magenta-pink accent */
-  --pink:#f79abf;       /* soft pink */
-  --blush:#fcdbe6;      /* light pink surface */
-  --cream:#fbf3ea;      /* cream surface */
-  --ink:#2a2622;        /* warm charcoal text */
-  --muted:#8a7f77;      /* warm grey */
+  --yellow:#ffd300;     /* brand primary highlight */
+  --flame:#ffd300;      /* accent (brand yellow) */
+  --orange:#ffd300;     /* alias -> yellow */
+  --coral:#ffbbda;      /* alias -> pink */
+  --hot-pink:#ffbbda;   /* soft pink accent */
+  --pink:#ffbbda;       /* soft pink */
+  --blush:#ffe3f0;      /* soft pink surface (tint of brand pink) */
+  --cream:#faf2e9;      /* main background */
+  --ink:#000000;        /* primary text */
+  --muted:#575757;      /* secondary text */
   --white:#ffffff;
-  --sunset:linear-gradient(120deg,#f79abf 0%,#ff6f8b 38%,#ff7a3c 76%,#ff5a2e 100%);
+  --sunset:linear-gradient(120deg,#ffd300 0%,#ffdf6b 45%,#ffbbda 100%);
   --radius:18px;
-  --shadow:0 10px 30px rgba(255,90,46,0.12);
-  --shadow-soft:0 2px 14px rgba(42,38,34,0.06);
+  --shadow:0 10px 30px rgba(0,0,0,0.12);
+  --shadow-soft:0 2px 14px rgba(0,0,0,0.06);
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
 body{
-  font-family:'Poppins',sans-serif;
+  font-family:'Montserrat',sans-serif;
   font-weight:400;
   color:var(--ink);
   background:var(--cream);
   line-height:1.65;
   font-size:15px;
 }
-.script{font-family:'Kaushan Script',cursive;}
+.script{font-family:'Sacramento',cursive;}
 
 .page{max-width:960px;margin:0 auto;padding:0 28px 64px;}
 
@@ -66,7 +67,7 @@ body{
   position:relative;
 }
 .hero h1{
-  font-family:'Kaushan Script',cursive;
+  font-family:'Sacramento',cursive;
   font-weight:400;
   font-size:clamp(52px,9vw,84px);
   line-height:1.1;
@@ -171,7 +172,7 @@ body{
 .mark-stage.primary{background:var(--blush);}
 .mark-stage.secondary{background:var(--ink);}
 .mark-stage .wordmark{
-  font-family:'Kaushan Script',cursive;
+  font-family:'Sacramento',cursive;
   font-size:46px;
   color:var(--flame);
   line-height:1.2;
@@ -269,7 +270,7 @@ body{
 /* ---------- Typography ---------- */
 .type-specimen{margin-bottom:6px;}
 .type-specimen .demo-script{
-  font-family:'Kaushan Script',cursive;
+  font-family:'Sacramento',cursive;
   font-size:40px;
   color:var(--flame);
   line-height:1.25;
@@ -342,7 +343,7 @@ body{
   break-inside:avoid;
 }
 .tagline .num{
-  font-family:'Kaushan Script',cursive;
+  font-family:'Sacramento',cursive;
   font-size:28px;
   color:var(--pink);
   min-width:34px;
@@ -466,6 +467,28 @@ body{
   .frame-demo{box-shadow:none;}
   .section,.card,.swatch,.tagline,.dd-col,.say-col,.mark-stage{break-inside:avoid;}
 }
+
+/* ===== Brand refresh: yellow/pink/cream + Archivo/Sacramento/Montserrat, dark text on light brand fills ===== */
+.section > h2, .demo-h{font-family:'Archivo',sans-serif;}
+.eyebrow{color:var(--ink);}
+.section > h2 .script{color:var(--ink);}
+.positioning strong{color:var(--ink);}
+.trait{color:var(--ink);}
+.trait:nth-child(3){background:var(--ink);color:var(--white);}
+.mark-stage .wordmark{color:var(--ink);}
+.gradient-band span{color:var(--ink);}
+.type-specimen .demo-script{color:var(--ink);}
+.say-col.yes h4{color:var(--ink);}
+.tagline .num{color:var(--ink);}
+.dd-col.do h4{color:var(--ink);}
+.dd-col.do li::before{color:var(--ink);}
+.sheet-footer .script{color:var(--ink);}
+
+/* Hero on brand gradient: ink treatment */
+.hero{color:var(--ink);}
+.hero h1{text-shadow:0 3px 22px rgba(0,0,0,0.08);}
+.hero-eyebrow{color:var(--ink);}
+.hero .pronounce{background:rgba(255,255,255,0.4);border-color:rgba(0,0,0,0.28);}
 </style>
 </head>
 <body>
@@ -475,7 +498,7 @@ body{
   <h1 class="script">Megan O'Byrne</h1>
   <div class="descriptor">Social Media Strategist &amp; Content Creator</div>
   <div class="pronounce">O'Byrne, said "O'Burn"</div>
-  <div class="doc-label">Identity Sheet &middot; Sunset Edition</div>
+  <div class="doc-label">Identity Sheet &middot; Golden Edition</div>
 </header>
 
 <main class="page">
@@ -504,20 +527,20 @@ body{
         <div class="mark-stage primary">
           <div class="wordmark">Megan O'Byrne</div>
         </div>
-        <div class="mark-caption">Primary &middot; Kaushan Script in Flame</div>
+        <div class="mark-caption">Primary &middot; Brittany script in Ink</div>
       </div>
       <div>
         <div class="mark-stage secondary">
           <div class="lockup">Megan O'Byrne</div>
           <div class="lockup-sub">Social Media Strategist &amp; Content Creator</div>
         </div>
-        <div class="mark-caption">Secondary &middot; Poppins Uppercase Lockup</div>
+        <div class="mark-caption">Secondary &middot; Agrandir Grand Bold Uppercase Lockup</div>
       </div>
     </div>
     <div class="card mark-rules" style="margin-top:20px;">
       <ul>
-        <li>Primary wordmark is the name set in Kaushan Script, always in Flame (#ff5a2e), on Blush, Cream or White backgrounds. On the sunset gradient, use White.</li>
-        <li>Secondary lockup is Poppins 800 uppercase with wide letter-spacing, used where script would be too decorative (footers, small print, dark surfaces).</li>
+        <li>Primary wordmark is the name set in Brittany, in Ink (#000000), on Cream, Pink or White backgrounds. On the yellow gradient, keep it Ink.</li>
+        <li>Secondary lockup is Agrandir Grand Bold uppercase with wide letter-spacing, used where script would be too decorative (footers, small print, dark surfaces).</li>
         <li>Clear space: keep at least the height of the capital "M" free on all sides of either mark.</li>
         <li>Do not stretch, outline, add drop shadows to, recolour outside the palette, or set the wordmark on busy photography without a scrim.</li>
         <li>Never pair the wordmark with any other brand's logo or colours.</li>
@@ -528,46 +551,44 @@ body{
   <!-- 4. Colour -->
   <section class="section">
     <div class="eyebrow">03 &middot; Colour Palette</div>
-    <h2>The <span class="script">sunset</span> palette</h2>
-    <div class="gradient-band"><span>Sunset Gradient &middot; hero backgrounds &amp; primary CTAs</span></div>
+    <h2>The <span class="script">golden</span> palette</h2>
+    <div class="gradient-band"><span>Brand Gradient &middot; hero backgrounds &amp; feature bands</span></div>
     <div class="swatches">
-      <div class="swatch"><div class="chip" style="background:#ff5a2e;"></div><div class="meta"><div class="name">Flame</div><div class="hex">#FF5A2E</div><div class="role">Primary &middot; wordmark, CTAs</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#ff7a3c;"></div><div class="meta"><div class="name">Orange</div><div class="hex">#FF7A3C</div><div class="role">Warm support</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#ff6f61;"></div><div class="meta"><div class="name">Coral</div><div class="hex">#FF6F61</div><div class="role">Accents, photo frames</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#f0609e;"></div><div class="meta"><div class="name">Hot Pink</div><div class="hex">#F0609E</div><div class="role">Magenta-pink accent</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#f79abf;"></div><div class="meta"><div class="name">Pink</div><div class="hex">#F79ABF</div><div class="role">Soft pink family</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#fcdbe6;"></div><div class="meta"><div class="name">Blush</div><div class="hex">#FCDBE6</div><div class="role">Light pink surface</div></div></div>
-      <div class="swatch"><div class="chip bordered" style="background:#fbf3ea;"></div><div class="meta"><div class="name">Cream</div><div class="hex">#FBF3EA</div><div class="role">Base surface</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#2a2622;"></div><div class="meta"><div class="name">Ink</div><div class="hex">#2A2622</div><div class="role">Body text, dark surfaces</div></div></div>
-      <div class="swatch"><div class="chip" style="background:#8a7f77;"></div><div class="meta"><div class="name">Muted</div><div class="hex">#8A7F77</div><div class="role">Captions, secondary text</div></div></div>
-      <div class="swatch"><div class="chip bordered" style="background:#ffffff;"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div><div class="role">Cards, text on gradient</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#ffd300;"></div><div class="meta"><div class="name">Yellow</div><div class="hex">#FFD300</div><div class="role">Primary &middot; backgrounds, highlights, CTAs</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#ffbbda;"></div><div class="meta"><div class="name">Pink</div><div class="hex">#FFBBDA</div><div class="role">Soft accent, feature bands, frames</div></div></div>
+      <div class="swatch"><div class="chip bordered" style="background:#faf2e9;"></div><div class="meta"><div class="name">Cream</div><div class="hex">#FAF2E9</div><div class="role">Base surface</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#575757;"></div><div class="meta"><div class="name">Grey</div><div class="hex">#575757</div><div class="role">Captions, secondary text</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#000000;"></div><div class="meta"><div class="name">Black</div><div class="hex">#000000</div><div class="role">Body text, wordmark, dark surfaces</div></div></div>
+      <div class="swatch"><div class="chip bordered" style="background:#ffffff;"></div><div class="meta"><div class="name">White</div><div class="hex">#FFFFFF</div><div class="role">Cards, clean space</div></div></div>
     </div>
-    <p class="palette-note"><b>How to use it:</b> Flame leads. The pink family (Hot Pink, Pink, Blush) softens and warms. Cream and White carry the layouts. Ink does the talking. Body text is always Ink on light surfaces, never light grey on cream.</p>
+    <p class="palette-note"><b>How to use it:</b> Yellow leads as a background and highlight, never as text. Pink softens and warms feature bands and photo frames. Cream and White carry the layouts. Black does the talking and Grey handles captions. Body text is always Black on light surfaces, never a pale tint on cream. Because Yellow and Pink are too light to read as text, always pair them with Black type on top.</p>
   </section>
 
   <!-- 5. Typography -->
   <section class="section">
     <div class="eyebrow">04 &middot; Typography</div>
-    <h2>Two typefaces, <span class="script">one voice</span></h2>
+    <h2>Three typefaces, <span class="script">one voice</span></h2>
     <div class="grid-2">
       <div class="card">
-        <div class="type-label">Display &amp; Script Accent</div>
+        <div class="type-label">Headings &amp; Script Accent</div>
         <div class="type-specimen">
-          <div class="demo-script">Kaushan Script</div>
+          <div class="demo-h">Agrandir Grand Bold</div>
+          <div class="demo-script">Brittany</div>
         </div>
-        <div class="type-rules"><b>Use for:</b> her name, hero flourishes and single accent words inside headings. <b>Never for:</b> body copy, buttons, captions or anything long. Keep it rare so it stays special.</div>
-        <div class="type-scale"><b>Hero name:</b> 52 to 84px &middot; <b>Section flourish:</b> 28 to 40px</div>
+        <div class="type-rules"><b>Agrandir Grand Bold:</b> all headings and the uppercase lockup, in Black. <b>Brittany:</b> her name, hero flourishes and single emphasised words inside headings. Never set Brittany in body copy, buttons or captions. Keep it rare so it stays special.</div>
+        <div class="type-scale"><b>Hero name:</b> 52 to 84px &middot; <b>Heading flourish:</b> 28 to 40px</div>
       </div>
       <div class="card">
-        <div class="type-label">Headings, Body &amp; UI</div>
+        <div class="type-label">Body &amp; UI</div>
         <div class="type-specimen">
-          <div class="demo-h">Poppins carries everything else</div>
-          <p class="demo-body">Weights 400 to 800. Clear, friendly and modern. Body copy sits at 15 to 16px with relaxed line height.</p>
+          <div class="demo-h" style="font-size:22px;">Montserrat carries the rest</div>
+          <p class="demo-body">Weights 400 to 800. Clean, friendly and modern. Body copy sits at 15 to 16px with relaxed line height.</p>
         </div>
-        <div class="type-rules"><b>Eyebrow labels:</b> Poppins 600, uppercase, 2.5px letter-spacing, Flame, ~12px. <b>Headings:</b> Poppins 700 or 800 in Ink.</div>
-        <div class="type-scale"><b>H1:</b> 32 to 44px 800 &middot; <b>H2:</b> 24 to 28px 700 &middot; <b>Body:</b> 15 to 16px 400 &middot; <b>Caption:</b> 12 to 13px 500</div>
+        <div class="type-rules"><b>Eyebrow labels:</b> Montserrat 600, uppercase, 2.5px letter-spacing, Black, ~12px. <b>Headings:</b> Agrandir Grand Bold in Black.</div>
+        <div class="type-scale"><b>H1:</b> 32 to 44px &middot; <b>H2:</b> 24 to 28px &middot; <b>Body:</b> 15 to 16px 400 &middot; <b>Caption:</b> 12 to 13px 500</div>
       </div>
     </div>
+    <p class="palette-note" style="margin-top:18px;"><b>Web note:</b> Agrandir Grand Bold and Brittany are licensed fonts. Until their web font files are added to the site, the live pages use free stand-ins that keep the same feel: <b>Archivo</b> (heavy) for Agrandir and <b>Sacramento</b> for Brittany. Montserrat is the exact web font. Swap in the licensed files to match the brand precisely.</p>
   </section>
 
   <!-- 6. Voice -->
@@ -615,7 +636,7 @@ body{
             <li>Sunsets and golden-hour warmth. Light that feels like the palette.</li>
             <li>Travel, wellness and real-life moments. Lived-in, not staged.</li>
             <li>Authentic UGC-style photography and video. Phones welcome, people first.</li>
-            <li>Photo frames: 3 to 4px solid Flame or Coral borders with a slight rotation, echoing a collage feel.</li>
+            <li>Photo frames: 3 to 4px solid Yellow or Pink borders with a slight rotation, echoing a collage feel.</li>
             <li>No stock-corporate imagery. No handshakes in glass offices, no posed suits.</li>
           </ul>
         </div>
@@ -624,7 +645,7 @@ body{
             <div class="frame-demo"></div>
             <div class="frame-demo alt"></div>
           </div>
-          <div class="frame-caption">Framed photo treatment: Flame or Coral border, slight tilt</div>
+          <div class="frame-caption">Framed photo treatment: Yellow or Pink border, slight tilt</div>
         </div>
       </div>
     </div>
@@ -638,10 +659,10 @@ body{
       <div class="dd-col do">
         <h4>Do</h4>
         <ul>
-          <li>Lead with Flame and the sunset gradient.</li>
-          <li>Set body text in Ink on Cream, White or Blush.</li>
-          <li>Keep Kaushan Script for the name and rare accents only.</li>
-          <li>Use pill buttons: Flame or sunset fill, white Poppins 600 text.</li>
+          <li>Lead with Yellow and the brand gradient as backgrounds.</li>
+          <li>Set body text in Black on Cream, White or Pink.</li>
+          <li>Keep Brittany for the name and rare accents only.</li>
+          <li>Use pill buttons: Yellow or gradient fill, Black Montserrat 600 text.</li>
           <li>Use real photos and honest, plain language.</li>
           <li>Leave placeholders where a real proof point is still to come.</li>
         </ul>
@@ -649,12 +670,12 @@ body{
       <div class="dd-col dont">
         <h4>Don't</h4>
         <ul>
-          <li>No green or gold anywhere in the identity.</li>
+          <li>No colours outside the six-swatch palette. No old orange or sunset tones.</li>
           <li>No ForeShiloh logos, colours or straplines. This is Meg's brand.</li>
+          <li>No Yellow or Pink text on light backgrounds. They are for fills, not type.</li>
           <li>No invented metrics, testimonials, client names or results.</li>
           <li>No em dashes or double hyphens in copy.</li>
           <li>No corporate jargon, hype or stock-corporate imagery.</li>
-          <li>No light grey paragraphs on cream backgrounds.</li>
         </ul>
       </div>
     </div>
