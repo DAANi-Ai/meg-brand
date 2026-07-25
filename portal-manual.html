@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Command Centre — The Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --flame:#ff5a2e; --orange:#ff7a3c; --hot-pink:#f0609e; --pink:#f79abf;
+    --blush:#fcdbe6; --cream:#fbf3ea; --ink:#2a2622; --muted:#8a7f77; --white:#ffffff;
+    --sunset:linear-gradient(120deg,#f79abf 0%,#ff6f8b 38%,#ff7a3c 76%,#ff5a2e 100%);
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;scroll-behavior:smooth;}
+  body{font-family:'Poppins',sans-serif;font-size:14px;color:var(--ink);background:var(--cream);line-height:1.65;}
+  .page{max-width:880px;margin:0 auto;padding:0 24px 70px;}
+  .hero{background:var(--sunset);color:var(--white);
+    border-radius:0 0 28px 28px;padding:54px 30px 46px;text-align:center;}
+  .hero .kick{font-weight:600;text-transform:uppercase;letter-spacing:2.5px;font-size:11px;margin-bottom:10px;opacity:.92;}
+  .hero h1{font-weight:800;font-size:38px;line-height:1.15;letter-spacing:-0.5px;text-shadow:0 2px 14px rgba(42,38,34,.18);}
+  .hero .sub{font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:2px;margin-top:8px;opacity:.95;}
+  .hero p{max-width:560px;margin:16px auto 0;font-size:14px;opacity:.97;}
+  .hero .url{display:inline-block;background:var(--white);color:var(--flame);border-radius:999px;padding:9px 24px;font-weight:700;font-size:14px;margin-top:18px;}
+  h2{font-weight:800;font-size:22px;margin:44px 0 4px;display:flex;align-items:center;gap:12px;}
+  h2 .n{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--sunset);color:var(--white);
+    display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;}
+  h3{font-weight:700;font-size:15px;margin:18px 0 6px;color:var(--flame);}
+  .lead{color:var(--muted);font-size:13px;margin:2px 0 14px 46px;font-style:italic;}
+  .card{background:var(--white);border-radius:var(--radius);padding:20px 24px;margin:12px 0;box-shadow:0 2px 12px rgba(42,38,34,.06);break-inside:avoid;}
+  p{margin:0 0 10px;}
+  ul,ol{margin:6px 0 10px 4px;list-style:none;}
+  li{position:relative;padding:4px 0 4px 22px;}
+  li::before{content:"";position:absolute;left:2px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--sunset);}
+  ol{counter-reset:steps;}
+  ol li{counter-increment:steps;padding-left:30px;}
+  ol li::before{content:counter(steps);width:20px;height:20px;top:6px;left:0;background:var(--flame);color:var(--white);
+    border-radius:50%;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .tip{background:var(--blush);border-left:4px solid var(--hot-pink);border-radius:0 12px 12px 0;padding:12px 16px;margin:12px 0;font-size:13px;break-inside:avoid;}
+  .tip b{font-weight:700;color:var(--flame);}
+  .golden{background:var(--ink);color:#fdf6f0;border-radius:var(--radius);padding:22px 26px;margin:14px 0;break-inside:avoid;}
+  .golden h3{color:var(--pink);margin-top:0;}
+  .golden li::before{background:var(--pink);}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0;background:var(--white);border-radius:12px;overflow:hidden;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.8px;text-align:left;
+    padding:10px 12px;background:var(--flame);color:var(--white);}
+  td{padding:9px 12px;border-bottom:1px solid var(--blush);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .yes{color:#1f8f4c;font-weight:700;}
+  .no{color:#c8391a;font-weight:700;}
+  .badge{display:inline-block;background:var(--blush);color:var(--flame);border-radius:999px;padding:2px 12px;font-size:11px;font-weight:700;white-space:nowrap;}
+  .foot{margin-top:44px;padding-top:18px;border-top:1px solid rgba(42,38,34,.12);text-align:center;color:var(--muted);font-size:12px;}
+  .foot .w{font-weight:800;font-size:17px;color:var(--flame);display:block;margin-bottom:2px;letter-spacing:.5px;}
+  .toc{background:var(--white);border-radius:var(--radius);padding:20px 24px;margin:26px 0 0;box-shadow:0 2px 12px rgba(42,38,34,.06);}
+  .toc h3{margin-top:0;color:var(--flame);}
+  .toc a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--pink);}
+  .toc li{padding:3px 0 3px 22px;}
+  @media print{
+    body{font-size:12px;}
+    .hero{padding:34px 24px 30px;}
+    .card,.tip,.golden,table{break-inside:avoid;}
+    h2{break-after:avoid;}
+    .toc{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kick">The Manual</div>
+  <h1>Content Command Centre</h1>
+  <div class="sub">How everything works, in plain English</div>
+  <p>Your portal runs every client's social media in one calm place: planning, writing, approvals, meetings, results. This manual walks through every feature and how to get the best out of it. Nothing in here needs technical knowledge.</p>
+  <span class="url">meg.foreshiloh.com</span>
+</header>
+
+<main class="page">
+
+  <div class="toc">
+    <h3>What is in this manual</h3>
+    <ul>
+      <li><a href="#s1">Getting in and your account</a></li>
+      <li><a href="#s2">How a post travels: the approval journey</a></li>
+      <li><a href="#s3">Your clients page and adding logins</a></li>
+      <li><a href="#s4">Onboarding a new client automatically</a></li>
+      <li><a href="#s5">The content calendar</a></li>
+      <li><a href="#s6">Writing with AI, in the client's voice</a></li>
+      <li><a href="#s7">How your client approves, without logging in</a></li>
+      <li><a href="#s8">The idea bank</a></li>
+      <li><a href="#s9">Pillars, audience, and the brand guide: the portal's brain</a></li>
+      <li><a href="#s10">Messages</a></li>
+      <li><a href="#s11">Meeting notes: record, review, send, and mine for content</a></li>
+      <li><a href="#s12">Analytics and the monthly client report</a></li>
+      <li><a href="#s13">The morning digests</a></li>
+      <li><a href="#s14">The golden weekly workflow</a></li>
+      <li><a href="#s15">Who sees what</a></li>
+      <li><a href="#s16">Quick answers</a></li>
+    </ul>
+  </div>
+
+  <h2 id="s1"><span class="n">1</span>Getting in and your account</h2>
+  <p class="lead">Log in at meg.foreshiloh.com with your email and password.</p>
+  <div class="card">
+    <ul>
+      <li>My account (top right) is where you and your clients change passwords. New passwords need at least 8 characters.</li>
+      <li>When you create a login for a client, the portal gives you a temporary password to pass on. Encourage them to change it in My account on first login.</li>
+      <li>Log out is next to My account. Sessions last two weeks, so on your own devices you will rarely need to log in again.</li>
+    </ul>
+  </div>
+
+  <h2 id="s2"><span class="n">2</span>How a post travels: the approval journey</h2>
+  <p class="lead">Every post moves through the same six stops. This is the heart of the whole system.</p>
+  <div class="card">
+    <p><span class="badge">Idea</span> &rarr; <span class="badge">Draft</span> &rarr; <span class="badge">Needs approval</span> &rarr; <span class="badge">Client approved</span> &rarr; <span class="badge">Approved</span> &rarr; <span class="badge">Published</span></p>
+    <ul>
+      <li>Idea and Draft are private. Only you can see them. This is your workshop, experiment freely.</li>
+      <li>Push to client is the moment a post becomes visible to the client and they are emailed to review it.</li>
+      <li>The client can do exactly two things: approve, or request changes (they must say what to change).</li>
+      <li>Client approved is not the end: you give the final sign-off, so nothing is official until you say so. Two locks on every door.</li>
+      <li>Mark it Published once it is live on the platform, so your records match reality.</li>
+    </ul>
+    <div class="tip"><b>Why two-stage approval matters:</b> the client can never accidentally publish, skip a step, or approve something you have not finished. The portal physically refuses any shortcut.</div>
+  </div>
+
+  <h2 id="s3"><span class="n">3</span>Your clients page and adding logins</h2>
+  <p class="lead">All clients (manager view) is your front door: every client, with a count of posts awaiting approval.</p>
+  <div class="card">
+    <ol>
+      <li>Add a new client with just their name. Their whole workspace is created instantly.</li>
+      <li>Add a client login (their name and email) for each person who should see the workspace. They only ever see their own company's content, never anyone else's.</li>
+      <li>Pass on the temporary password the portal shows you. They can change it in My account.</li>
+    </ol>
+  </div>
+
+  <h2 id="s4"><span class="n">4</span>Onboarding a new client automatically</h2>
+  <p class="lead">A ten-minute questionnaire that builds a new client's strategy while you make a cup of tea.</p>
+  <div class="card">
+    <ol>
+      <li>On the clients page, click Onboarding link next to the client.</li>
+      <li>Copy the link and send it to your client. It works for 30 days and needs no login.</li>
+      <li>They answer friendly questions about their business, their voice, their audience, and a story they are proud of.</li>
+      <li>The portal then fills in their brand and voice guide, builds their audience map, and proposes content pillars and starter post ideas for you to review. You get an email when they finish.</li>
+    </ol>
+    <div class="tip"><b>It never overwrites you:</b> anything you have already filled in stays exactly as you wrote it. The questionnaire only fills empty spaces.</div>
+  </div>
+
+  <h2 id="s5"><span class="n">5</span>The content calendar</h2>
+  <p class="lead">One board per client showing every post at every stage.</p>
+  <div class="card">
+    <h3>Creating a post</h3>
+    <ul>
+      <li>Fill in the title, the copy, the channel, the pillar, and an optional publish date.</li>
+      <li>Attach an image or video if you have it, the client will see the real thing when they approve.</li>
+      <li>Choose the starting status. Idea or Draft keeps it private to you.</li>
+    </ul>
+    <h3>Your private drafts strip</h3>
+    <p>The pink panel shows Idea and Draft posts only you can see. Each has a Push to client button, that is the moment it goes for approval and the client gets their email.</p>
+    <h3>The main board</h3>
+    <p>Everything the client can see, column by column. Posts waiting for your final sign-off have an approve button right on the card.</p>
+  </div>
+
+  <h2 id="s6"><span class="n">6</span>Writing with AI, in the client's voice</h2>
+  <p class="lead">The portal writes first drafts the way your client actually sounds, because it reads their brand guide first.</p>
+  <div class="card">
+    <ul>
+      <li>Draft with AI on the calendar: type what the post is about, pick channel and pillar, and a full draft appears in about fifteen seconds, in your private drafts.</li>
+      <li>Draft with AI on any idea in the idea bank: same thing, one click, using the idea and its notes as the brief.</li>
+      <li>The AI reads the client's voice guide, pillars, audience, and their best-performing posts before writing a word. The better you fill in the brand guide, the better it writes. Garbage in, garbage out; gold in, gold out.</li>
+    </ul>
+    <div class="tip"><b>The golden rule:</b> nothing AI-written is ever visible to a client until you have polished it and pressed Push. You are always the editor in chief.</div>
+  </div>
+
+  <h2 id="s7"><span class="n">7</span>How your client approves, without logging in</h2>
+  <p class="lead">The part your clients will love you for.</p>
+  <div class="card">
+    <ul>
+      <li>When you push a post, every client login gets an email containing the post, any image or video, and a personal magic link.</li>
+      <li>They tap the link and land on a branded page, no password, and either approve in one click or write what needs changing.</li>
+      <li>You get an email the moment they act, whichever way they did it.</li>
+      <li>Links are personal, expire after 14 days, and become harmless once the post moves on. Clicking an old link just says "already handled."</li>
+      <li>Clients who prefer the portal can still log in and approve there, both routes work.</li>
+    </ul>
+  </div>
+
+  <h2 id="s8"><span class="n">8</span>The idea bank</h2>
+  <p class="lead">Where raw ideas live so you never face a blank page.</p>
+  <div class="card">
+    <ul>
+      <li>Add an idea with a pillar, a format, and a priority. It is private by default.</li>
+      <li>Share with client makes an idea visible to them, useful for "what do you think of these?" conversations. Unshare pulls it back.</li>
+      <li>Draft with AI turns any idea into a full draft in the client's voice, one click.</li>
+    </ul>
+  </div>
+
+  <h2 id="s9"><span class="n">9</span>Pillars, audience, and the brand guide: the portal's brain</h2>
+  <p class="lead">These three pages look like admin. They are actually what makes everything intelligent.</p>
+  <div class="card">
+    <ul>
+      <li>Content pillars are the four or five themes every post hangs from. The AI tags meeting ideas with them and writes within them.</li>
+      <li>The audience map records who the content must reach, in priority order. The AI writes with these people in mind.</li>
+      <li>The brand and voice guide is the client's personality on paper: how they sound, what readers should feel, words to avoid, colours (type a hex code and a colour swatch appears). Every AI draft is built on this.</li>
+    </ul>
+    <div class="tip"><b>Best use:</b> spend twenty minutes making these three pages properly rich for each client, ideally straight after their onboarding questionnaire or discovery meeting. Every AI feature gets sharper for it, forever.</div>
+  </div>
+
+  <h2 id="s10"><span class="n">10</span>Messages</h2>
+  <p class="lead">One running conversation per client, with email doing the reminding.</p>
+  <div class="card">
+    <ul>
+      <li>Each client workspace has a message thread between you and their team.</li>
+      <li>When you send a message, they get an email with a preview and a link; when they reply, you get one. Nobody has to remember to check the portal.</li>
+      <li>Replying to the notification email goes to the real person, not to a machine.</li>
+    </ul>
+  </div>
+
+  <h2 id="s11"><span class="n">11</span>Meeting notes: record, review, send, and mine for content</h2>
+  <p class="lead">Your calls become notes, actions, and next month's content, automatically, but always through your hands.</p>
+  <div class="card">
+    <h3>Recording</h3>
+    <ul>
+      <li>Record straight from the browser during or after a call, or upload an audio file.</li>
+      <li>The portal transcribes it and drafts a summary plus suggested actions. The audio file is deleted once transcribed, only the words are kept.</li>
+    </ul>
+    <h3>Review, edit, send</h3>
+    <ul>
+      <li>Every note has a Review and edit panel. Tidy the AI's draft first, it is a draft, not gospel.</li>
+      <li>Email these notes sends your edited summary to whoever you tick (client, yourself, Zoe or anyone else). Nothing sends until you press the button, and sent notes are stamped so you can see what went where.</li>
+    </ul>
+    <h3>Content from this meeting</h3>
+    <ul>
+      <li>The portal reads the transcript and proposes three to six posts based only on what was actually said. Each has an Add to calendar as draft button.</li>
+      <li>Anything it could not verify appears as a [placeholder] for you to fill, it never invents facts.</li>
+      <li>Older recordings have a Generate content ideas button to run the same magic retrospectively.</li>
+    </ul>
+    <h3>Archive</h3>
+    <ul>
+      <li>Archive moves old notes out of the way; the Archived tab (with its counter) is where they live. Unarchive brings them back; Delete is forever.</li>
+    </ul>
+  </div>
+
+  <h2 id="s12"><span class="n">12</span>Analytics and the monthly client report</h2>
+  <p class="lead">The proof of your value, gathered in one place and turned into a report clients actually read.</p>
+  <div class="card">
+    <h3>Getting numbers in</h3>
+    <ul>
+      <li>LinkedIn: open the company page analytics, press Export, and drag the downloaded file into the portal. That file is called a CSV, it is just a spreadsheet, nothing scary.</li>
+      <li>Or add a row by hand for any month and channel.</li>
+    </ul>
+    <h3>AI insights</h3>
+    <ul>
+      <li>Generate insights reads the numbers, the posts, and the pillars together and tells you what is working, what is not, and what to do next. Only you see this.</li>
+    </ul>
+    <h3>The monthly report</h3>
+    <ol>
+      <li>Press Generate this month's report on the analytics page.</li>
+      <li>The portal gathers the month's numbers and shipped posts and writes a warm, honest summary addressed to the client. It never invents figures; when data is thin it says it is early days.</li>
+      <li>You edit the narrative until it sounds like you.</li>
+      <li>Tick the recipients and send. It arrives as a designed, branded email, and the report is stamped with who received it and when.</li>
+    </ol>
+    <div class="tip"><b>Best use:</b> send it the same week every month. It is the single most powerful retainer-keeping habit you can have, and it now takes minutes.</div>
+  </div>
+
+  <h2 id="s13"><span class="n">13</span>The morning digests</h2>
+  <p class="lead">The portal does the chasing so you never have to nag.</p>
+  <div class="card">
+    <ul>
+      <li>Every morning at 8, clients with posts waiting get one polite email listing them, each with its one-click approval link.</li>
+      <li>You get your own summary of posts awaiting your sign-off or carrying change requests, across all clients.</li>
+      <li>When nothing is waiting, nobody gets an email. Silence means all clear.</li>
+    </ul>
+  </div>
+
+  <h2 id="s14"><span class="n">14</span>The golden weekly workflow</h2>
+  <p class="lead">How all the pieces click together into one calm routine.</p>
+  <div class="golden">
+    <h3>The loop that runs a client beautifully</h3>
+    <ol>
+      <li>Meet the client, record the call. Notes and actions draft themselves; you tidy and email them the same day.</li>
+      <li>Open Content from this meeting and add the best proposals to the calendar as drafts.</li>
+      <li>Top up with Draft with AI from the idea bank for anything else the week needs.</li>
+      <li>Polish every draft in your own words, attach the visuals, then Push to client.</li>
+      <li>Approvals happen from their inbox; the morning digest chases anything that stalls.</li>
+      <li>Give your final sign-off, publish on the platform, and mark posts Published.</li>
+      <li>Once a month: import the analytics, generate insights for yourself, and send the client their report.</li>
+    </ol>
+  </div>
+
+  <h2 id="s15"><span class="n">15</span>Who sees what</h2>
+  <p class="lead">Worth showing to clients so everyone knows the boundaries.</p>
+  <table>
+    <tr><th>Feature</th><th>You (manager)</th><th>Your client</th></tr>
+    <tr><td>Idea and Draft posts</td><td class="yes">Yes</td><td class="no">Never</td></tr>
+    <tr><td>Posts pushed for approval and beyond</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+    <tr><td>Post images and video</td><td class="yes">Yes</td><td class="yes">Only on posts they can see</td></tr>
+    <tr><td>Idea bank</td><td class="yes">All ideas</td><td class="yes">Only ideas you share</td></tr>
+    <tr><td>Pillars, audience, brand guide</td><td class="yes">Edit</td><td class="yes">View</td></tr>
+    <tr><td>Messages</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+    <tr><td>Meeting notes and transcripts</td><td class="yes">Yes</td><td class="no">Only what you email them</td></tr>
+    <tr><td>Analytics and AI insights</td><td class="yes">Yes</td><td class="yes">Can view and import; insights via your report</td></tr>
+    <tr><td>Monthly report</td><td class="yes">Create and edit</td><td class="yes">Receives by email</td></tr>
+    <tr><td>Other clients' workspaces</td><td class="yes">Yes</td><td class="no">Never, enforced by the system</td></tr>
+  </table>
+
+  <h2 id="s16"><span class="n">16</span>Quick answers</h2>
+  <div class="card">
+    <ul>
+      <li>A client forgot their password: for now, ask Daniel to reset it; a self-serve reset is on the roadmap. They can change it themselves any time via My account once logged in.</li>
+      <li>An approval link says it is not valid: it has expired (14 days) or the post has moved on. Push again or use the portal.</li>
+      <li>The AI wrote something odd: edit it, that is the design. Better brand guides produce better drafts.</li>
+      <li>Does anything send automatically? Only notifications and the morning digest. Content, notes, and reports never leave without you pressing the button.</li>
+      <li>Something broken or a feature you wish existed: email or WhatsApp Daniel. This portal grows around how you actually work.</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <span class="w">Megan O'Byrne</span>
+    Content Command Centre Manual &middot; July 2026 &middot; Built with Daniel at ForeShiloh
+  </div>
+
+</main>
+</body>
+</html>
